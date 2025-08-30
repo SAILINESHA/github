@@ -1,11 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sugar & Spice — Bakery & Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <link rel="icon" href="https://favicon.io/favicon-generator/?t=SS&ff=Poppins&fs=90&fc=%23ffffff&b=rounded&bc=%23ff6a00" />
 </head>
 <body>
-<h> Hellowwwww baccheyyyy </h>   
+  <!-- Background gradient orbs -->
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+  <div class="bg-orb orb-c"></div>
+
+  <!-- NAV -->
+  <header class="nav-wrap">
+    <nav class="nav">
+      <a class="brand" href="#"><span>🍰</span> Sugar & Spice</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#specials">Specials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact" class="btn grad">Book Table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1><span class="highlight">Fresh</span> Bakes, <br>Bold Flavors.</h1>
+      <p>Artisan breads, dreamy pastries, & chef-crafted plates — baked with love daily.</p>
+      <div class="cta">
+        <a class="btn grad" href="#menu">Explore Menu</a>
+        <a class="btn ghost" href="#contact">Catering?</a>
+      </div>
+    </div>
+
+    <div class="hero-card" id="tilt-card" aria-label="Featured cake image">
+      <img
+        alt="Strawberry Cake"
+        src="./cakeberry.jpeg"
+      />
+      <div class="shine"></div>
+      <div class="chip">Best Seller</div>
+      <div class="floating-badge">3D</div>
+    </div>
+  </section>
+
+  <!-- STATS / RIBBON -->
+  <section class="ribbon">
+    <div class="stat"><strong>1500+</strong><span>Happy Customers</span></div>
+    <div class="stat"><strong>50+</strong><span>Menu Items</span></div>
+    <div class="stat"><strong>100%</strong><span>Fresh Daily</span></div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="menu section">
+    <div class="section-head">
+      <h2>Our Menu</h2>
+      <p>Sweet to savory — pick your delight.</p>
+    </div>
+    <div class="grid cards-3d">
+      <!-- Card 1 -->
+      <article class="card3d">
+        <img src="./butter.jpeg">
+        <div class="card-body">
+          <h3>Butter Croissant</h3>
+          <p>Flaky, airy layers with French butter. Perfect with coffee.</p>
+          <div class="price-row">
+            <span class="price">₹120</span>
+            <button class="btn mini grad add-cart" data-item="Butter Croissant">Add</button>
+          </div>
+        </div>
+      </article>
+      <!-- Card 2 -->
+      <article class="card3d">
+        <img src="./berry.jpeg">
+        <div class="card-body">
+          <h3>Berry Tart</h3>
+          <p>Vanilla custard, fresh berries, crisp shell. Summer on a plate.</p>
+          <div class="price-row">
+            <span class="price">₹180</span>
+            <button class="btn mini grad add-cart" data-item="Berry Tart">Add</button>
+          </div>
+        </div>
+      </article>
+      <!-- Card 3 -->
+      <article class="card3d">
+        <img src="./burger.jpeg">
+        <div class="card-body">
+          <h3>Gourmet Burger</h3>
+          <p>Charred patty, melted cheese, house brioche, secret sauce.</p>
+          <div class="price-row">
+            <span class="price">₹260</span>
+            <button class="btn mini grad add-cart" data-item="Gourmet Burger">Add</button>
+          </div>
+        </div>
+      </article>
+      <!-- Card 4 -->
+      <article class="card3d">
+        <img src="./pasta.jpeg">
+        <div class="card-body">
+          <h3>Pasta Primavera</h3>
+          <p>Seasonal veggies, basil pesto, parmesan snow.</p>
+          <div class="price-row">
+            <span class="price">₹240</span>
+            <button class="btn mini grad add-cart" data-item="Pasta Primavera">Add</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SPECIALS (Parallax-ish) -->
+  <section id="specials" class="specials parallax section">
+    <div class="overlay"></div>
+    <div class="section-head light">
+      <h2>Chef’s Specials</h2>
+      <p>Limited drops every weekend.</p>
+    </div>
+    <div class="specials-strip">
+      <div class="pill">Tiramisu Cloud</div>
+      <div class="pill">Truffle Mushroom Toast</div>
+      <div class="pill">Mango Cheesecake</div>
+      <div class="pill">Burrata Salad</div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery section">
+    <div class="section-head">
+      <h2>Gallery</h2>
+      <p>Swipe through some favorites.</p>
+    </div>
+    <div class="carousel" id="carousel">
+      <button class="car-btn prev" aria-label="Previous">‹</button>
+      <div class="car-track">
+        <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1400&auto=format&fit=crop" alt="Breakfast">
+        <img src="https://images.unsplash.com/photo-1523983302504-5f7f72a5e3b8?q=80&w=1400&auto=format&fit=crop" alt="Cakes">
+        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1400&auto=format&fit=crop" alt="Coffee">
+        <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=1400&auto=format&fit=crop" alt="Pizza">
+      </div>
+      <button class="car-btn next" aria-label="Next">›</button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact section">
+    <div class="section-head">
+      <h2>Book a Table</h2>
+      <p>Tell us when you’re coming — we’ll save the best seat.</p>
+    </div>
+    <form class="form glass" id="bookForm">
+      <div class="row">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required />
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" placeholder="98765 43210" required />
+        </label>
+      </div>
+      <div class="row">
+        <label>
+          Guests
+          <input type="number" name="guests" min="1" max="20" value="2" required />
+        </label>
+        <label>
+          Date & Time
+          <input type="datetime-local" name="when" required />
+        </label>
+      </div>
+      <label>
+        Notes
+        <textarea name="notes" rows="3" placeholder="Allergies, occasion, etc."></textarea>
+      </label>
+      <button class="btn grad big" type="submit">Reserve</button>
+      <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Sugar & Spice · Crafted with ♥</p>
+    <div class="socials">
+      <a href="#" aria-label="Instagram">📸</a>
+      <a href="#" aria-label="Twitter">🐦</a>
+      <a href="#" aria-label="Maps">📍</a>
+    </div>
+  </footer>
 </body>
 </html>
